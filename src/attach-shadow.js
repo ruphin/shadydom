@@ -482,7 +482,7 @@ class ShadyRoot {
   }
 
   _updateSlotName(slot) {
-    if (!this._slotList) {
+    if (!this._slotList || this._renderPending) {
       return;
     }
     const oldName = slot.__slotName;
